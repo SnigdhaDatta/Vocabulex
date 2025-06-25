@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
+
+@theme{
+  --font-croissant: "Croissant One"
+  --font-inter: Inter;
+  --font-gravitas: "Gravitas One";
+  --font-oleo : "Oleo Script Swash Caps";
+}

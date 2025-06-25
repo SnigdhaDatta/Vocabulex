@@ -1,0 +1,2 @@
+# Dictionary
+Minimal dictionary application
