@@ -13,10 +13,12 @@ function App() {
   return (
     <>
       <div className="w-full
-        md:max-w-2xl
-        lg:max-w-3xl
-        md:mx-auto           
-        lg:mx-auto          
+          md:max-w-2xl
+          lg:max-w-3xl
+          md:mx-auto
+          px-4
+          relative
+          overflow-x-hidden
         ">
         <Header></Header>
         <Theme theme={theme} setTheme={setTheme}></Theme>
