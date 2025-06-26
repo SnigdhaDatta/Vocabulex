@@ -87,12 +87,14 @@ export default function DisplayCard(props) {
 
     if(data?.title==='No Definitions Found'){
         return(
-            <p className="text-2xl text-fuchsia-600 pl-8 pr-8 absolute bottom-1/2">{data?.message} because such a word doesn't exist. So Please type your word carefully</p>
+            <div className="flex flex-col justify-center items-center text-center">
+                <p className="text-2xl text-fuchsia-600 pl-8 pr-8">{data?.message} because such a word doesn't exist. So Please type your word carefully</p>
+            </div>
         )
     }
-    if(!word){
+    if(!data){
         return(
-            <div className="pl-8 absolute bottom-5/12 text-6xl font-gravitas hover:text-fuchsia-600 hover:scale-90 transition duration-300">
+            <div className="flex flex-col justify-center items-center text-center text-6xl font-gravitas hover:text-fuchsia-600 hover:scale-90 transition duration-300 leading-snug min-h-[70vh]">
                     <h4 >
                         <span className="bg-gradient-to-r from-gray-600 to-purple-400 bg-clip-text text-transparent">
                             Increase Your Vocab
@@ -118,13 +120,14 @@ export default function DisplayCard(props) {
     }
     
     return(
-        <div className="pl-8">  
+        
+        <div className="pl-4 pr-4">  
             <br />
             <div className="flex">
                 <h1 className="text-5xl font-oleo">{data?.[0]?.word?.toLowerCase()}</h1>  {/*word */}
-                <button onClick={()=>{(audioRef.current)?audioRef.current.play():undefined}}>
+                <button onClick={()=>{(audioRef.current)?audioRef.current.play():undefined}} className="absolute right-4 z-10">
                     <audio ref={audioRef} src={(phoneticsData.audio.trim()!=='')?phoneticsData.audio:undefined}></audio>
-                    <i className="fa-solid fa-circle-play text-5xl absolute end-8 text-purple-500 hover:scale-90 transition duration-300 cursor-pointer"></i>
+                    <i className="fa-solid fa-circle-play text-5xl text-purple-500 hover:scale-90 transition duration-300 cursor-pointer"></i>
                 </button>
             </div>
             <h3 className="text-fuchsia-800">/{phoneticsData.text}/</h3> {/*phonetic */}
@@ -164,13 +167,12 @@ export default function DisplayCard(props) {
                                     <br />
                                     {
                                         synonym.length!==0?(
-                                                <div className="flex">
-                                                    <h2 className="text-gray-500 font-gravitas pr-4">Synonyms</h2>
-                                                    <h2 className="text-purple-600 font-extrabold font-gravitas">{synonym}</h2>
-                                                    <br />
-                                                </div>
-                                            ):null
-                                        
+                                            <div className="flex pr-8">
+                                                <h2 className="text-gray-500 font-gravitas pr-4">Synonyms</h2>
+                                                <h2 className="text-purple-600 font-extrabold font-gravitas pr-4">{synonym}</h2>
+                                                <br />
+                                            </div>
+                                        ):null          
                                     }
                             </div>
                         )
@@ -180,12 +182,12 @@ export default function DisplayCard(props) {
                 <hr className="border-gray-300"/>
                 <br />
                 <div className="flex">
-                    <h4 className="text-gray-400 pr-4">Source</h4>
+                    <h4 className="text-gray-400 pr-4 pl-2">Source</h4>
                     <a href={sourceUrls} className="hover:text-purple-600" target="POST">
                     Wikipedia
                     <i className="fa-solid fa-arrow-up-right-from-square pl-3 text-gray-600 hover:scale-90 transition duration-300"></i>
                     </a>
-                </div>
+                </div> 
             </div> 
         </div>        
         
