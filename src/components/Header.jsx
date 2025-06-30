@@ -1,12 +1,25 @@
 // import DisplayCard from "./DisplayCard";
-export default function Header(props){
-    //const {setShowDisplayCard}=props
-    return(
-        <div className="flex pl-2 pr-8 pb-5 pt-10">
-            <i className="fa-solid fa-2x fa-book hover:scale-90 transition duration-300 cursor-pointer" onClick={()=>window.location.reload()}></i>  
-             <p className="pl-1.5 pt-1.5 font-mono">Vocabulex</p>
-             <i className="fa-regular fa-1.5x fa-moon  text-3xl hover:scale-90 transition duration-300 cursor-pointer relative md:left-10/12 left-8/12 mr-10"></i>   
-               
-        </div>
-    )
+export default function Header() {
+  return (
+    <div className="relative flex items-center justify-start pl-2 pr-8 pt-10 pb-5">
+      {/* Book icon */}
+      <i
+        className="fa-solid fa-2x fa-book hover:scale-90 transition duration-300 cursor-pointer"
+        onClick={() => window.location.reload()}
+      ></i>
+
+      {/* Title */}
+      <p className="pl-2 font-mono text-xl">Vocabulex</p>
+
+      {/* Moon icon */}
+      <i
+        className="fa-regular fa-moon 
+        text-3xl 
+        hover:scale-90 transition duration-300 
+        cursor-pointer 
+        absolute right-7 
+        top-6 md:top-8 lg:top-10"
+      ></i>
+    </div>
+  );
 }
