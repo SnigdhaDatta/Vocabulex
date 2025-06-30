@@ -11,13 +11,13 @@ export default function SearchBar(props) {
             }
             name="word"
             placeholder="Type a Word" 
-            className="bg-gray-200 w-full h-12 rounded-md p-4 shadow-2xl shadow-purple-400"
+            className="bg-gray-200 w-full h-12 rounded-md p-4 shadow-2xl shadow-purple-500"
             />
             <i className="fa-solid fa-magnifying-glass 
                text-2xl 
                absolute right-7 top-1/2 
                transform -translate-y-1/2 
-               text-gray-600 hover:text-fuchsia-600 
+               text-gray-600 hover:text-purple-600 
                hover:scale-90 transition duration-300 
                cursor-pointer" onClick={()=>setShowDisplayCard(true)}></i>
         </div>
