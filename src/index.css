@@ -19,3 +19,18 @@
 
 /* add support for dark mode */
 @custom-variant dark (&:where(.dark, .dark *)); 
+
+input:-webkit-autofill {
+  box-shadow:
+    0 0 0 30px #e5e7eb inset, 
+    0 25px 50px -12px rgba(168, 85, 247, 0.5); 
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.dark input:-webkit-autofill {
+  box-shadow:
+    0 0 0 30px #18181b inset, 
+    0 25px 50px -12px rgba(168, 85, 247, 0.5); 
+  -webkit-text-fill-color: #fff !important;
+}
