@@ -1,5 +1,5 @@
 {
-  "name": "dictionary",
+  "name": "vocabulex",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,6 +15,7 @@
     "prettier-plugin-tailwindcss": "^0.6.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-spinners": "^0.17.0",
     "tailwindcss": "^4.1.9"
   },
   "devDependencies": {

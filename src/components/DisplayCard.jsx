@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { BeatLoader } from 'react-spinners'
 //import { FaSpinner } from 'react-icons/fa'
 //import  SearchBar  from "./SearchBar"
 export default function DisplayCard(props) {
@@ -118,10 +119,12 @@ export default function DisplayCard(props) {
       </div>
     )
   }
-  if (loading === true) {
+
+  // loading spinner
+  if (loading) {
     return (
-      <div className="bottom-full pl-8 text-5xl">
-        <h4 className="font-serif">Loading....</h4>
+      <div className="mt-16 text-center">
+        <BeatLoader color="#6B46C1" size={20} />
       </div>
     )
   }
@@ -150,7 +153,7 @@ export default function DisplayCard(props) {
           <i className="fa-solid fa-circle-play cursor-pointer text-5xl text-purple-500 transition duration-300 hover:scale-90"></i>
         </button>
       </div>
-      <h3 className="text-fuchsia-800">/{phoneticsData.text}/</h3>{' '}
+      <h3 className="text-fuchsia-800 dark:text-fuchsia-500">/{phoneticsData.text}/</h3>{' '}
       {/*phonetic */}
       <div>
         {Object.entries(filteredMeanings).map(([partOfSpeech, definitions]) => {

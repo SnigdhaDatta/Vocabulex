@@ -10,3 +10,12 @@
   --font-gravitas: "Gravitas One";
   --font-oleo : "Oleo Script Swash Caps";
 }
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  width: 0px; /* Hides the scrollbar */
+  background: transparent; /* Makes it blend with the background */
+}
+
+/* add support for dark mode */
+@custom-variant dark (&:where(.dark, .dark *)); 
