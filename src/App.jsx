@@ -1,30 +1,29 @@
-import { useState } from "react";
-import  Header  from "./components/Header";
-import  SearchBar  from "./components/SearchBar";
-import  DisplayCard  from "./components/DisplayCard";
-import  Footer  from "./components/Footer";
-import Theme from "./components/Theme";
+import { useState } from 'react'
+import Header from './components/Header'
+import SearchBar from './components/SearchBar'
+import DisplayCard from './components/DisplayCard'
+import Footer from './components/Footer'
 function App() {
-
-  const[word,setWord]=useState('')
-  const[showDisplayCard,setShowDisplayCard]=useState(false)
-  const[theme,setTheme]=useState(false);
+  const [word, setWord] = useState('')
+  const [showDisplayCard, setShowDisplayCard] = useState(false)
 
   return (
     <>
-      <div className="w-full
-          md:max-w-2xl
-          lg:max-w-3xl
-          md:mx-auto
-          px-4
-          relative
-          overflow-x-hidden
-        ">
-        <Header></Header>
-        <Theme theme={theme} setTheme={setTheme}></Theme>
-        <SearchBar word={word} setWord={setWord} setShowDisplayCard={setShowDisplayCard}></SearchBar>
-        <DisplayCard word={word} showDisplayCard={showDisplayCard} setShowDisplayCard={setShowDisplayCard}></DisplayCard>
-        <Footer></Footer>
+      <div className="relative h-screen w-full overflow-x-hidden px-4 text-zinc-900 md:mx-auto md:max-w-2xl lg:max-w-3xl dark:text-zinc-100">
+        <Header />
+        <main className="flex-grow">
+          <SearchBar
+            word={word}
+            setWord={setWord}
+            setShowDisplayCard={setShowDisplayCard}
+          />
+          <DisplayCard
+            word={word}
+            showDisplayCard={showDisplayCard}
+            setShowDisplayCard={setShowDisplayCard}
+          />
+        </main>
+        <Footer />
       </div>
     </>
   )

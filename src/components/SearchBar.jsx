@@ -11,7 +11,7 @@ export default function SearchBar(props) {
         }}
         name="word"
         placeholder="Type a Word"
-        className="bg-gray-200 w-full h-12 rounded-md p-4 shadow-2xl shadow-purple-500"
+        className="bg-gray-200 w-full h-12 rounded-md p-4 shadow-2xl shadow-purple-500 dark:bg-zinc-900 focus:outline-none"
       />
       <i
         className="fa-solid fa-magnifying-glass 
@@ -20,7 +20,7 @@ export default function SearchBar(props) {
                transform -translate-y-1/2 
                text-gray-600 hover:text-purple-600 
                hover:scale-90 transition duration-300 
-               cursor-pointer"
+               cursor-pointer dark:bg-zinc-900"
         onClick={() => setShowDisplayCard(true)}
       ></i>
     </div>
