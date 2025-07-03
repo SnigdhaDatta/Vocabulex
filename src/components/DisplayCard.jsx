@@ -93,6 +93,7 @@ export default function DisplayCard(props) {
     return (
       <div className="font-serif flex min-h-[70vh] flex-col items-center justify-center text-center leading-snug transition duration-300 hover:scale-90">
         <br />
+        <h1 className='text-6xl animate-bounce'>🥲</h1>
         <br />
         <p className="text-2xl bg-gradient-to-r from-pink-300 to-fuchsia-600 bg-clip-text text-transparent">
           {data?.message} Since such a word doesn't exist. So Please type your
@@ -103,18 +104,19 @@ export default function DisplayCard(props) {
   }
   if (!data) {
     return (
-      <div className="font-oleo flex min-h-[70vh] flex-col items-center justify-center text-center text-6xl leading-snug transition duration-300 hover:scale-90">
+      <div 
+      className="font-oleo flex min-h-[70vh] flex-col items-center justify-center text-center text-6xl leading-snug transition duration-300 hover:scale-90">
         <h4>
           <span className="bg-gradient-to-r from-gray-600 to-purple-400 bg-clip-text text-transparent">
             Increase Your Vocab
           </span>
-          ✨
+          <p className='inline animate-none'>✨</p>
         </h4>
         <h4>
           <span className="bg-gradient-to-r from-gray-600 to-purple-400 bg-clip-text text-transparent">
             With Just a Search
           </span>
-          🔍
+          <p className='inline animate-none'>🔍</p>
         </h4>
       </div>
     )
