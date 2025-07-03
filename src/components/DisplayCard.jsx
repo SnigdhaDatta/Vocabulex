@@ -153,7 +153,9 @@ export default function DisplayCard(props) {
           <i className="fa-solid fa-circle-play cursor-pointer text-5xl text-purple-500 transition duration-300 hover:scale-90"></i>
         </button>
       </div>
-      <h3 className="text-fuchsia-800 dark:text-fuchsia-500">/{phoneticsData.text}/</h3>{' '}
+      <h3 className="text-fuchsia-800 dark:text-fuchsia-500">
+        {phoneticsData.text}
+      </h3>{' '}
       {/*phonetic */}
       <div>
         {Object.entries(filteredMeanings).map(([partOfSpeech, definitions]) => {
