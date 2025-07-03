@@ -91,12 +91,12 @@ export default function DisplayCard(props) {
 
   if (data?.title === 'No Definitions Found') {
     return (
-      <div className="bg-center">
+      <div className="font-serif flex min-h-[70vh] flex-col items-center justify-center text-center leading-snug transition duration-300 hover:scale-90">
         <br />
         <br />
-        <p className="pr-8 pl-8 text-2xl text-fuchsia-600">
-          {data?.message} because such a word doesn't exist. So Please type your
-          word carefully
+        <p className="text-2xl bg-gradient-to-r from-pink-300 to-fuchsia-600 bg-clip-text text-transparent">
+          {data?.message} Since such a word doesn't exist. So Please type your
+          word carefully !
         </p>
       </div>
     )
